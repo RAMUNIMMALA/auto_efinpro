@@ -1,0 +1,30 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>auto_finpro</groupId>
+  <artifactId>auto_finpro</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>auto_finpro</name>
+  <description>Efinpro Automation</description>
+  <parent>
+    <groupId>enterprise.automation.framework</groupId>
+    <artifactId>enterprise.automation.framework</artifactId>
+    <version>01.0-SNAPSHOT</version>
+</parent>
+<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.18</version>
+				<configuration>
+					<systemPropertyVariables>
+						<implicitWait>10</implicitWait>
+						<browserName>ie</browserName>
+						<appUrl>http://dotnetdrive.com/</appUrl>
+					</systemPropertyVariables>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	
+</project>
